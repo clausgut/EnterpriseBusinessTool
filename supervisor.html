@@ -1,85 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-                <meta charset="UTF-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-                <title>EBT Supervisor</title>
-                <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-                <!-- Compiled and minified CSS -->
-                <link
-                  rel="stylesheet"
-                  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-                />
-                <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-            
-                <!-- Compiled and minified JavaScript -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-                <!--Let browser know website is optimized for mobile-->
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <!--Import Google Icon Font-->
-                <link
-                  href="https://fonts.googleapis.com/icon?family=Material+Icons"
-                  rel="stylesheet"
-                />
-                <!--Import materialize.css-->
-                <link
-                  type="text/css"
-                  rel="stylesheet"
-                  href="css/materialize.min.css"
-                  media="screen,projection"
-                />
-              </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>EBT Supervisor</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <!-- Compiled and minified CSS -->
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
+        <script
+          type="text/javascript"
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+        ></script>
+    
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--Import Google Icon Font-->
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
+        
+        <!-- <script type="text/javascript" src="assets/js/materialize.min.js"></script> -->
+      </head>
 <body>
     <div id="employeePage">
         <main>
-     
+
+          <!-- HEADER NAVBAR WITH LOGO SECTION -->
             <div class="wrapper">
 
-                    <div class="">
-                        
-                        
+                    <div class="navBar">                    
                 
-                        <nav class="indigo lighten-3 " role="navigation" >
-                            <div class="nav-wrapper container left" style="padding-left:50px;">
+                        <nav class="nav-wrapper indigo lighten-3 " role="navigation" style="padding-left:50px; ">
+                            
                                 <a href="#!" class="brand-logo " ><img
                                     src="assets/images/logo2.png" style=" height:65px; width:190px; "></a>
-                                
-                            </div>
+                                    <a  href="#"  id="supLogout" class="waves-effect waves-light orange darken-4 btn right" style="margin-top:10px; margin-right:5%;">Log Out</a>                     
+                            
                         </nav>
+                        
                     </div>
                 
                 </div>
-                <div class="sideNaveContent" style="width:10%; height: 72vh; background-color:rgb(141, 122, 247);">
+                <!--  SIDE-NAV SECTION -->
+
+        <div class="row flex">
+            <div class="col s6 m2 l2 blue-grey darken-1">
+              <ul>
+              <li style="color: white; font-size:2rem;">DASHBOARD</li>
+              </ul>
+            
+            <!-- SIDE-NAV LINKs -->
+            <br>
+            <ul style="height:60vh;">
+  
+          <li>
+                <a href="#modal10" id="supRevenue" class="black-text modal-trigger"
+                  ><h5>Revenue</h5></a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  href="#modal11"
+                  id="supAddInv"
+                  class="black-text modal-trigger"
+                  ><h5>Add Item To Inventory</h5></a
+                >
+              </li>
+              <br />
+              <li>
+                <a href="#modal12" id="supRemoveInv" class="black-text modal-trigger"
+                  ><h5>Remove Item From Inventory</h5></a
+                >
+              </li>
+              <br>
+              <li>
+                  <a href="#modal13" id="supBudget" class="black-text modal-trigger"
+                    ><h5>Budget</h5></a
+                  >
+                </li>
+                <br />
+                <li>
+                  <a
+                    href="#modal14"
+                    id="supGoals"
+                    class="black-text modal-trigger"
+                    ><h5>Set Goals</h5></a
+                  >
+                </li>
+                <br />
+                <li>
+                  <a href="#modal15" id="supSchedule" class="black-text modal-trigger"
+                    ><h5>Schedule Dashboard</h5></a
+                  >
+                </li>
+                <br />
+                <li>
+                  <a href="#modal16" id="supComment" class="black-text modal-trigger"
+                    ><h5>Comments</h5></a
+                  >
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+          </div>
                 
-                <ul id="slide-out" class="side-nav fixed " style="padding-left:20px; padding-top:5px;">
-                    <li><a href="#!" class="black-text"><h5> Revenue</h5></a></li>
-                    <br>
-                    <li><a href="#!"class="black-text"><h5>Add Items to Inventory</h5></a></li>
-                    <br>
-                    <li><a href="#!"class="black-text"><h5>Remove Items From Inventory</h5></a></li>
-                    <br>
-                    <li><a href="#!"class="black-text"><h5>Employee Schedules</h5></a></li>
-                    <br>
-                    <li><a href="#!"class="black-text"><h5>Review Budgets </h5></a></li>
-                    <br>
-                    <li><a href="#!"class="black-text"><h5>Set Goals</h5></a></li>
-                    <br>
-                    <li><a href="#!"class="black-text"><h5>Comments</h5></a></li>
-                
-            </div>
             <div style="height:15px;"></div>
             
+            <!--  MODAL SECTION -->
+        <div id="modal10" class="modal" style="background-color: transparent;">
+            <div class="modal-content">
+              <h4>REVENUE</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+                laudantium quod quo.
+              </p>
+            </div>
+            <div class="modal-footer" style="background-color: transparent;">
+              <a
+                class="modal-action modal-close waves-effect waves-green btn-flat"
+                >Ok</a
+              >
+            </div>
+          </div>
+  
+          <div id="modal11" class="modal" style="background-color: transparent;">
+            <div class="modal-content">
+              <h4>ADD ITEM TO INVENTORY</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+                laudantium quod quo.
+              </p>
+            </div>
+            <div class="modal-footer" style="background-color: transparent;">
+              <a
+                class="modal-action modal-close waves-effect waves-green btn-flat"
+                >Ok</a
+              >
+            </div>
+          </div>
+  
+          <div id="modal12" class="modal" style="background-color: transparent;">
+            <div class="modal-content">
+              <h4>REMOVE ITEM FROM INVENTORY</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+                laudantium quod quo.
+              </p>
+            </div>
+            <div class="modal-footer" style="background-color: transparent;">
+              <a
+                class="modal-action modal-close waves-effect waves-green btn-flat"
+                >Ok</a
+              >
+            </div>
+          </div>
+          <div id="modal13" class="modal" style="background-color: transparent;">
+              <div class="modal-content">
+                <h4>BUDGET</h4>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+                  laudantium quod quo.
+                </p>
+              </div>
+              <div class="modal-footer" style="background-color: transparent;">
+                <a
+                  class="modal-action modal-close waves-effect waves-green btn-flat"
+                  >Ok</a
+                >
+              </div>
+            </div>
     
+            <div id="modal14" class="modal" style="background-color: transparent;">
+              <div class="modal-content">
+                <h4>SETTING GOALS</h4>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+                  laudantium quod quo.
+                </p>
+              </div>
+              <div class="modal-footer" style="background-color: transparent;">
+                <a
+                  class="modal-action modal-close waves-effect waves-green btn-flat"
+                  >Ok</a
+                >
+              </div>
+            </div>
     
+            <div id="modal15" class="modal" style="background-color: transparent;">
+              <div class="modal-content">
+                <h4>SCHEDULE</h4>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+                  laudantium quod quo.
+                </p>
+              </div>
+              <div class="modal-footer" style="background-color: transparent;">
+                <a
+                  class="modal-action modal-close waves-effect waves-green btn-flat"
+                  >Ok</a
+                >
+              </div>
+            </div>
+            <div id="modal16" class="modal" style="background-color: transparent;">
+                <div class="modal-content">
+                  <h4>COMMENTS</h4>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+                    laudantium quod quo.
+                  </p>
+                </div>
+                <div class="modal-footer" style="background-color: transparent;">
+                  <a
+                    class="modal-action modal-close waves-effect waves-green btn-flat"
+                    >Ok</a
+                  >
+                </div>
+              </div>
 
-
-
-
-
-
-
-
+          <!-- FOOTER SECTION  -->
        <footer class="page-footer indigo lighten-3 text-black">
          <p
             class="black-text center"
@@ -93,7 +248,7 @@
                           <pre>        © 2019 Copyright </pre>
                           <a class="black-text text-lighten-4 right" href="#!"
                             ><pre>
-                  Contributing developers: Claudia, Gabriele, Jake, Orion, Morteza      </pre
+                  Contributing developers: Claudia, Gabriel, Jake, Orion, Morteza      </pre
                             ></a>
                           
                         </div>
@@ -101,12 +256,21 @@
             
         </main>
     </div>
+
+    <!-- INITIALIZING MODAL SECTION -->
+    
     <script>
-    
-    $(document).ready(function(){
-    $('.sidenav').sidenav();
-    };
-    
-    </script>
+        $(document).ready(function() {
+          
+          $('.modal ').modal({
+            dismissible: true,
+            inDuration: 300,
+            outDuration: 200,
+            ready: function(modal, trigger) {
+              console.log('modal opened', modal, trigger);
+            }
+          });
+        });
+      </script>
 </body>
 </html>
