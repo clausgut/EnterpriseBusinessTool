@@ -28,7 +28,7 @@ VALUES
 ('Olivia', 'Paradis', '594 Placeholder Rd. Vacaville, CA 98865', '07/17/2016', 82500, 1, 'Accounting Team Lead', 'MTWTF', '8AM to 5PM'),
 ('Serena', 'Gomez', '12 Not A Real Address Pl. Duluth, GA 30345', '03/13/2015', 78000, 2, 'Recruiter', 'MTWTF', '8AM to 5PM');
 
-CREATE TABLE auth_credentials(
+CREATE TABLE login_credentials(
 	id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     username VARCHAR(30) NOT NULL,
     password VARCHAR(30) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE auth_credentials(
     employee_id INT(5) NOT NULL
 );
 
-INSERT INTO auth_credentials(username, password, access_level, employee_id)
+INSERT INTO login_credentials(username, password, access_level, employee_id)
 VALUES
 ('jdavis', 'testPass', 2, 1),
 ('pfrancisco', 'testPass1', 1, 2),
