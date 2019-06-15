@@ -6,9 +6,9 @@ var router = express.Router();
 var manager = require('../models/manager.js');
 
 // Create the routes and associated logic
-router.get('/', function(req, res)) {
-    res.render('index');
-}
+router.get('/', function(req, res) {
+    res.render('supervisor');
+});
 
 router.get('/revenue/', function (req, res) {
     manager_revenue.selectAll(function (data) {

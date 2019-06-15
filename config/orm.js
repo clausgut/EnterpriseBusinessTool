@@ -43,7 +43,6 @@ var orm = {
 
 	// Function that insert a single table entry
 	insertOne: function(table, cols, vals, cb) {
-		let cols = [];
 		// Construct the query string that inserts a single row into the target table
 		var queryString = "INSERT INTO " + table;
 		for(let i = 0; i< cols.length; i++) {

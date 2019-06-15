@@ -91,4 +91,4 @@ var manager_goals = {
   }
 }
 // Export the database functions for the controller(manager_controller.js)
-module.exports = manager_revenue, manager_budget, manager_inventory, manager_schedule, manager_goals;
+module.exports = manager_revenue, manager_budget, manager_inventory, manager_goals;

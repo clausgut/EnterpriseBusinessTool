@@ -7,7 +7,7 @@ var manager = require('../models/manager.js');
 
 // Create the routes and associated logic
 router.get('/', function (req, res)) {
-    res.render('index');
+    res.json(res);
 }
 
 router.get('/budget/', function (req, res) {
@@ -91,7 +91,7 @@ router.put('/managers/:month_entered', function (req, res) {
         research_development: req.res.research_development,
         testing_validation: req.res.testing_validation,
         production_planning: req.res.production_planning,
-        
+
     }, condition, function (data) {
         res.redirect('/');
 

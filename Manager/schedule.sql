@@ -5,25 +5,21 @@ CREATE TABLE schedule(
 
     hours INTEGER NOT NULL,
     
-    monday  VARCHAR 
+    monday  VARCHAR (150) NOT NULL,
     
-    tuesday VARCHAR
+    tuesday VARCHAR (150) NOT NULL,
 
-    wednesday VARCHAR
+    wednesday VARCHAR (150) NOT NULL,
 
-    thursday VARCHAR
+    thursday VARCHAR (150) NOT NULL,
 
-    friday VARCHAR
+    friday VARCHAR (150) NOT NULL,
 
-    saturday VARCHAR
+    saturday VARCHAR (150) NOT NULL,
 
-    sunday VARCHAR
+    sunday VARCHAR (150) NOT NULL,
 
     PRIMARY KEY(item_id)
 
 )
 
-INSERT INTO schedule
-    VALUES(36000,3459.8, 345.7, 300, 456, 475758, 57586, "Automotive", );
-INSERT INTO schedule
-    VALUES('Dog Ice cream - strawberry','Pets', 8.99, 150);

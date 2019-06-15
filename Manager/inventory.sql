@@ -1,19 +1,22 @@
+DROP DATABASE IF EXISTS employee_db;
+
 USE employee_db;
 
-CREATE TABLE revenue(
+CREATE TABLE inventory(
+ 
+ item_id INTEGER NOT NULL AUTO_INCREMENT,
 
-Finance_Cost_Control .
-Sales and Marketing.
-IR (Industrial Relation)
-IT.
-Production/Manufacturing.
-Maintenance and Utilities
-Manufacturing Engineering.
-Quality Assurance and Quality Systems.
-Packaging and Dispatch.
-Production Engineering.
-Supply Chain and Logistics.
-Design & Development.
-Research & Development.
-Testing and Validation.
-Production Planning and Control (PPC)
+ serial_number DECIMAL(10,4) NOT NULL,
+
+ name VARCHAR (150) NOT NULL,
+
+ inventory INTEGER (10) NOT NULL,
+
+ sales_number_item INTEGER(10) NOT NULL,
+
+ PRIMARY KEY (item_id);
+
+)
+
+
+
