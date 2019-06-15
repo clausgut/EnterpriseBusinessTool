@@ -1,0 +1,156 @@
+<div id="employeePage">
+    <main>
+
+        <!-- HEADER NAVBAR WITH LOGO SECTION -->
+        <div class="wrapper">
+
+            <div class="navBar">
+
+                <nav class="nav-wrapper indigo lighten-3 " role="navigation" style="padding-left:50px; ">
+
+                    <a href="#!" class="brand-logo "><img src="./assets/images/logo2.png"
+                            style=" height:65px; width:190px; "></a>
+                    <a href="#" id="supLogout" class="waves-effect waves-light orange darken-4 btn right"
+                        style="margin-top:10px; margin-right:5%;">Log Out</a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+        <!--  SIDE-NAV SECTION -->
+
+        <div class="row flex">
+            <div class="col s6 m2 l2 blue-grey darken-1">
+                <ul>
+                    <li style="color: white; font-size:1.5rem;">DASHBOARD</li>
+                </ul>
+
+                <!-- SIDE-NAV LINKs -->
+                <ul style="height:65vh;">
+
+                    <li>
+                        <a href="#modal3" id="empProfile" class="black-text modal-trigger">
+                            <h5>Profile</h5>
+                        </a>
+                    </li>
+                    <br />
+                    <li>
+                        <a href="#modal4" id="empSchedule" class="black-text modal-trigger">
+                            <h5>Schedule</h5>
+                        </a>
+                    </li>
+                    <br />
+                    <li>
+                        <a href="#modal5" id="empPayment" class="black-text modal-trigger">
+                            <h5>Payments</h5>
+                        </a>
+                    </li>
+                    <br />
+                    <li>
+                        <a href="#modal6" id="empRequestOff" class="black-text modal-trigger">
+                            <h5>Request Time Off</h5>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+
+
+<!--  MODAL SECTION -->
+<div id="modal3" class="modal" style="background-color: transparent;">
+    <div class="modal-content">
+        <h4>Employee Profile</h4>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+            reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+            laudantium quod quo.
+        </p>
+    </div>
+    <div class="modal-footer" style="background-color: transparent;">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+    </div>
+</div>
+
+<div id="modal4" class="modal" style="background-color: transparent;">
+    <div class="modal-content">
+        <h4>Schedule</h4>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+            reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+            laudantium quod quo.
+        </p>
+    </div>
+    <div class="modal-footer" style="background-color: transparent;">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+    </div>
+</div>
+
+<div id="modal5" class="modal" style="background-color: transparent;">
+    <div class="modal-content">
+        <h4>Payments</h4>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+            reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+            laudantium quod quo.
+        </p>
+    </div>
+    <div class="modal-footer" style="background-color: transparent;">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+    </div>
+</div>
+
+<div id="modal6" class="modal" style="background-color: transparent;">
+    <div class="modal-content">
+        <h4>Request Time Off</h4>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+            reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
+            laudantium quod quo.
+        </p>
+    </div>
+    <div class="modal-footer" style="background-color: transparent;">
+        <a class="modal-action modal-close waves-effect waves-dark btn-flat">Ok</a>
+    </div>
+</div>
+
+<!-- FOOTER SECTION -->
+
+<footer class="page-footer indigo lighten-3 black-text">
+    <p class="black-text center" style="font-size:x-large; height:20px; padding: 0px; margin: 1.15%;">
+        We will help you grow.
+    </p>
+
+    <div class="footer-copyright black-text ">
+        <pre>        © 2019 Copyright </pre>
+        <a class="black-text text-lighten-4 right" href="#!">
+            <pre>
+      Contributing developers: Claudia, Gabriel, Jake, Orion, Morteza      </pre></a>
+    </div>
+</footer>
+</main>
+</div>
+
+<!-- <script>
+      $(document).ready(function() {
+        $('.sidenav').sidenav();
+      });
+    </script> -->
+
+
+<script>
+    $(document).ready(function () {
+
+        $('.modal ').modal({
+            dismissible: true,
+            inDuration: 300,
+            outDuration: 200,
+            ready: function (modal, trigger) {
+                console.log('modal opened', modal, trigger);
+            }
+        });
+    });
+</script>

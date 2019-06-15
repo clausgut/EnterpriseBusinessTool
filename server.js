@@ -3,6 +3,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const sequelize = require('sequelize');
 const db = require('db');
+const {supervisorRouter, employeeRouter, indexRouter, hrRouter} = require('./routes');
 
 // initialize the express server
 const PORT = process.env.PORT || 5000;
@@ -29,10 +30,11 @@ app.set('view engine', 'handlebars');
 // sync models in the database
 sequelize.sync();
 
-//importing routes
-const routes = require('./routes/indexRoutes.js');
-app.use(routes);
-
+// setting express to use created routes
+app.use('/api', supervisorRouter);
+app.use('/api', employeeRouter);
+app.use('/api', hrRouter);
+app.use('/api', indexRouter);
 
 app.get('/', (req, res) => {
     res.render('index');
