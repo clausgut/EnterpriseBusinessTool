@@ -54,7 +54,7 @@
         <div class="row flex">
             <div class="col s6 m2 l2 blue-grey darken-1">
               <ul>
-              <li style="color: white; font-size:2rem;">DASHBOARD</li>
+              <li style="color: white; font-size:1.3rem;">DASHBOARD</li>
               </ul>
             
             <!-- SIDE-NAV LINKs -->
@@ -117,7 +117,7 @@
             <div style="height:15px;"></div>
             
             <!--  MODAL SECTION -->
-        <div id="modal10" class="modal" style="background-color: transparent;">
+        <div id="modal10" class="modal" style="background-color: transparent; height:40vh;">
             <div class="modal-content">
               <h4>View Revenue</h4>
               <p>
@@ -125,8 +125,50 @@
               </p>
             </div>
             <div class="modal-footer" style="background-color: transparent;">
+              <!-- Dropdown Trigger -->
+              <div class="row">
+          <div class="input-field col m4">
+            <select>
+              <option value="" disabled selected>Choose an option</option>
+              <option value="1">Finance and Cost Control</option>
+              <option value="2">Sales ans Marketing</option>
+              <option value="3">Industrial Relation</option>
+              <option value="4">IT</option>
+              <option value="5">Production/Manufacturing</option>
+              <option value="6">Maintenance and Utilities</option>
+              <option value="7">Manufacturing Engineering</option>
+              <option value="8">Quality Assurance</option>
+              <option value="9">Distribution</option>
+              <option value="10">Production Engineering</option>
+              <option value="11">Logistics</option>
+              <option value="12">Design and Development</option>
+              <option value="13">Research and Development</option>
+              <option value="14">Production</option>
+            </select>
+            <label>View Department</label>
+          </div>
+          <div class="input-field col m4">
+            <select>
+              <option value="" disabled selected>Choose an option</option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>                            
+            </select>
+            <label>Choose A Month</label>
+          </div>
+        </div>
+
               <a
-                class="modal-action modal-close waves-effect waves-green btn-flat"
+                class="modal-action modal-close waves-effect  btn-flat red-text accent-4" style="font-size:2rem;"
                 >Ok</a
               >
             </div>
@@ -284,7 +326,7 @@
     
     <script>
         $(document).ready(function() {
-          $("select").formSelect();
+          $('select').formSelect();    
           $('.modal ').modal({
             dismissible: true,
             inDuration: 300,
