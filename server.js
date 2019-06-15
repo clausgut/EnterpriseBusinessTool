@@ -14,7 +14,7 @@ var connection = mysql.createConnection({
     port: 3306,
     user: "root",
     password:"",
-    database: "wishes_db"
+    database: "employee_db"
 });
 
 connection.connect(function(err){
@@ -27,7 +27,7 @@ connection.connect(function(err){
 });
 
 app.get("/", function(req, res){
-    connection.query("SELECT * FROM wishes;", function(err, data){
+    connection.query("SELECT * FROM employee_db;", function(err, data){
         if (err){
             throw err;
         }

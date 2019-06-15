@@ -1,4 +1,4 @@
-USE employee;
+USE employee_db;
 
 CREATE TABLE revenue(
    item_id INTEGER NOT NULL AUTO_INCREMENT,
@@ -31,7 +31,11 @@ CREATE TABLE revenue(
 
    price DECIMAL(10,4) NOT NULL,
 
-   date_entered INTEGER
+   day_entered INTEGER(10) NOT NULL,
+
+   month_entered INTEGER(10) NOT NULL,
+
+   year_entered INTEGER(10) NOT NULL,
 
    stock_quantity INTEGER(10) NOT NULL,
 
@@ -41,7 +45,7 @@ CREATE TABLE revenue(
     INSERT INTO revenue
     VALUES(36000,3459.8, 345.7, 300, 456, 475758, 57586, "Automotive", );
     INSERT INTO
-     VALUES('Dog Ice cream - strawberry','Pets', 8.99, 150);
+    VALUES('Dog Ice cream - strawberry','Pets', 8.99, 150);
     INSERT INTO revenue
     VALUES('Bouncy Paper Towel','Paper goods', 3.99, 700);
     INSERT INTO revenue
