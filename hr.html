@@ -91,12 +91,11 @@
         <!--  MODAL SECTION -->
         <div id="modal7" class="modal" style="background-color: transparent;">
             <div class="modal-content">
-              <h4>HR Payroll</h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-                laudantium quod quo.
-              </p>
+              <h4>Employee Payroll</h4>
+              <li>Name: John Davis | Salary: $80,000</li>
+              <li>Name: Pablo Francisco | Salary: $78,000</li>
+              <li>Name: Aneesh Patel | Salary: $90,000</li>
+              <li>Name: Jose Mendez | Salary: $75,000</li>
             </div>
             <div class="modal-footer" style="background-color: transparent;">
               <a
@@ -108,11 +107,12 @@
   
           <div id="modal8" class="modal" style="background-color: transparent;">
             <div class="modal-content">
-              <h4>Employee Dashboard</h4>
+              <h4>Employee Management</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-                laudantium quod quo.
+                <button> View Employees</button>
+                <button> Update Employee Info</button> <br> <br>
+                <button> Add New Employee</button>
+                <button> Remove Employee</button>
               </p>
             </div>
             <div class="modal-footer" style="background-color: transparent;">
@@ -125,11 +125,18 @@
   
           <div id="modal9" class="modal" style="background-color: transparent;">
             <div class="modal-content">
-              <h4>HRComments</h4>
+              <h4>Leave a Comment</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-                laudantium quod quo.
+                <input type="text" placeholder="Leave comments here">
+                <div class="input-field col s12"></div>
+                    <select>
+                      <option value="" disabled selected>Visibility</option>
+                      <option value="1">HR Only</option>
+                      <option value="2">All Management</option>
+                      <option value="3"> All Employees</option>
+                    </select>
+                    <label> Position</label>
+                  </div>
               </p>
             </div>
             <div class="modal-footer" style="background-color: transparent;">
@@ -168,7 +175,7 @@
     </script> -->
     <script>
         $(document).ready(function() {
-          
+          $("select").formSelect();
           $('.modal ').modal({
             dismissible: true,
             inDuration: 300,
