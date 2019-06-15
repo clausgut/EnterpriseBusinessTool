@@ -119,11 +119,9 @@
             <!--  MODAL SECTION -->
         <div id="modal10" class="modal" style="background-color: transparent; height:40vh;">
             <div class="modal-content">
-              <h4>REVENUE</h4>
+              <h4>View Revenue</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-                laudantium quod quo.
+                Table will be added later.
               </p>
             </div>
             <div class="modal-footer" style="background-color: transparent;">
@@ -178,11 +176,15 @@
   
           <div id="modal11" class="modal" style="background-color: transparent;">
             <div class="modal-content">
-              <h4>ADD ITEM TO INVENTORY</h4>
+              <h4>Add an Item</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-                laudantium quod quo.
+                <form>
+                  <input type="text" placeholder="Item Name">
+                  <input type="text" placeholder="Item ID">
+                  <input type="text" placeholder="Price">
+                  <input type="text" placeholder="Quantity">
+                  <button id="addItem">Add Item</button>
+                </form>
               </p>
             </div>
             <div class="modal-footer" style="background-color: transparent;">
@@ -195,11 +197,13 @@
   
           <div id="modal12" class="modal" style="background-color: transparent;">
             <div class="modal-content">
-              <h4>REMOVE ITEM FROM INVENTORY</h4>
+              <h4>Remove an Item</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-                laudantium quod quo.
+                <form>
+                  <input type="text" placeholder="Item Name">
+                  <input type="text" placeholder="Item ID">
+                  <button id="removeItem">Remove Item</button>
+                </form>
               </p>
             </div>
             <div class="modal-footer" style="background-color: transparent;">
@@ -211,11 +215,9 @@
           </div>
           <div id="modal13" class="modal" style="background-color: transparent;">
               <div class="modal-content">
-                <h4>BUDGET</h4>
+                <h4>Manage Budget</h4>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                  reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-                  laudantium quod quo.
+                  Table will be added later.
                 </p>
               </div>
               <div class="modal-footer" style="background-color: transparent;">
@@ -228,11 +230,19 @@
     
             <div id="modal14" class="modal" style="background-color: transparent;">
               <div class="modal-content">
-                <h4>SETTING GOALS</h4>
+                <h4>New Goal</h4>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                  reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-                  laudantium quod quo.
+                  <form>
+                    <input type="text" placeholder="Describe your goal here.">
+                <div class="input-field col s12"></div>
+                    <select>
+                      <option value="" disabled selected>Visibility</option>
+                      <option value="1">Supervisors Only</option>
+                      <option value="2">All Management</option>
+                      <option value="3"> All Employees</option>
+                    </select>
+                  </div>
+                  </form>
                 </p>
               </div>
               <div class="modal-footer" style="background-color: transparent;">
@@ -245,11 +255,13 @@
     
             <div id="modal15" class="modal" style="background-color: transparent;">
               <div class="modal-content">
-                <h4>SCHEDULE</h4>
+                <h4>Scheduling</h4>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                  reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-                  laudantium quod quo.
+                  <li>Name: Erica Richardson | Days Available: MTWTF | Next Shift: 8AM - 5PM </li>
+                  <li>Name: Tyrone Jefferson | Days Available: MTWTF | Next Shift: 7AM - 4PM </li>
+                  <li>Name: Martha Stewartsen | Days Available: MTWTF | Next Shift: 8AM - 5PM </li>
+                  <li>Name: Jessica Smith | Days Available: MTWTF | Next Shift: 8AM - 5PM </li> <br>
+                  <button id="editSchedules">Edit Scheduling</button>
                 </p>
               </div>
               <div class="modal-footer" style="background-color: transparent;">
@@ -261,11 +273,19 @@
             </div>
             <div id="modal16" class="modal" style="background-color: transparent;">
                 <div class="modal-content">
-                  <h4>COMMENTS</h4>
+                  <h4>Leave a Comment</h4>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                    reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-                    laudantium quod quo.
+                      <form>
+                          <input type="text" placeholder="Leave comments here.">
+                      <div class="input-field col s12"></div>
+                          <select>
+                            <option value="" disabled selected>Visibility</option>
+                            <option value="1">Supervisors Only</option>
+                            <option value="2">All Management</option>
+                            <option value="3"> All Employees</option>
+                          </select>
+                        </div>
+                        </form>
                   </p>
                 </div>
                 <div class="modal-footer" style="background-color: transparent;">
@@ -303,7 +323,7 @@
     
     <script>
         $(document).ready(function() {
-          $('select').formSelect();
+          $('select').formSelect();    
           $('.modal ').modal({
             dismissible: true,
             inDuration: 300,
