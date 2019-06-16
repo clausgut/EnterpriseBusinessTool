@@ -11,26 +11,17 @@
     "type": "git",
     "url": "git+https://github.com/clausgut/EnterpriseBusinessTool.git"
   },
-  "keywords": [
-    "handlebars",
-    "mysql",
-    "sequelize"
-  ],
-  "author": "J.David O.Holcomb G.Tunggala M.Zoughi",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/clausgut/EnterpriseBusinessTool/issues"
   },
   "homepage": "https://github.com/clausgut/EnterpriseBusinessTool#readme",
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.1.4"
-  },
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1",
-    "mysql2": "^1.6.5",
     "sequelize": "^5.8.9"
   }
 }

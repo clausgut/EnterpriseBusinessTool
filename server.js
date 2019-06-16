@@ -2,7 +2,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const sequelize = require('sequelize');
-const db = require('db');
+//const db = require('db');
 const {supervisorRouter, employeeRouter, indexRouter, hrRouter} = require('./routes');
 
 // initialize the express server
