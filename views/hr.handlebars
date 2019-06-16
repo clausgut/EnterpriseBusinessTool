@@ -1,133 +1,187 @@
-<div id="employeePage">
-    <main>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>EBT Human Resources</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <!-- Compiled and minified CSS -->
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
+        <script
+          type="text/javascript"
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+        ></script>
+    
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--Import Google Icon Font-->
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
+        
+        <!-- <script type="text/javascript" src="assets/js/materialize.min.js"></script> -->
+      </head>
+  <body>
+    <div id="employeePage">
+      <main>
 
         <!-- HEADER NAVBAR WITH LOGO SECTION -->
-        <div class="wrapper">
+          <div class="wrapper">
 
-            <div class="navBar">
-
-                <nav class="nav-wrapper indigo lighten-3 " role="navigation" style="padding-left:50px; ">
-
-                    <a href="#!" class="brand-logo "><img src="assets/images/logo2.png"
-                            style=" height:65px; width:190px; "></a>
-                    <a href="#" id="supLogout" class="waves-effect waves-light orange darken-4 btn right"
-                        style="margin-top:10px; margin-right:5%;">Log Out</a>
-
-                </nav>
-
-            </div>
-
-        </div>
+              <div class="navBar">                    
+          
+                  <nav class="nav-wrapper indigo lighten-3 " role="navigation" style="padding-left:50px; ">
+                      
+                          <a href="#!" class="brand-logo " ><img
+                              src="assets/images/logo2.png" style=" height:65px; width:190px; "></a>
+                              <a  href="#"  id="supLogout" class="waves-effect waves-light orange darken-4 btn right" style="margin-top:10px; margin-right:5%;">Log Out</a>                     
+                      
+                  </nav>
+                  
+              </div>
+          
+          </div>
         <!--  SIDE-NAV SECTION -->
 
         <div class="row flex">
             <div class="col s6 m2 l2 blue-grey darken-1">
-                <ul>
-                    <li style="color: white; font-size:1.5rem;">DASHBOARD</li>
-                </ul>
-
-                <!-- SIDE-NAV LINKs -->
-                <ul style="height:65vh;">
-
-                    <li>
-                        <a href="#modal7" id="hrPayroll" class="black-text modal-trigger">
-                            <h5>Payroll</h5>
-                        </a>
-                    </li>
-                    <br />
-                    <li>
-                        <a href="#modal8" id="hrEmployeeDashboard" class="black-text modal-trigger">
-                            <h5>Employee Dashboard</h5>
-                        </a>
-                    </li>
-                    <br />
-                    <li>
-                        <a href="#modal9" id="hrComment" class="black-text modal-trigger">
-                            <h5>Comments</h5>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
+              <ul>
+              <li style="color: white; font-size:1.3rem;">DASHBOARD</li>
+              </ul>
+            
+            <!-- SIDE-NAV LINKs -->
+            <ul style="height:65vh;">
+  
+          <li>
+                <a href="#modal7" id="hrPayroll" class="black-text modal-trigger"
+                  ><h5>Payroll</h5></a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  href="#modal8"
+                  id="hrEmployeeDashboard"
+                  class="black-text modal-trigger"
+                  ><h5>Employee Dashboard</h5></a
+                >
+              </li>
+              <br />
+              <li>
+                <a href="#modal9" id="hrComment" class="black-text modal-trigger"
+                  ><h5>Comments</h5></a
+                >
+              </li>
+              
+            </ul>
+          </div>
         </div>
-</div>
+          </div>
 
+        
 
+        <!--  MODAL SECTION -->
+        <div id="modal7" class="modal" style="background-color: transparent;">
+            <div class="modal-content">
+              <h4>Employee Payroll</h4>
+              <li>Name: John Davis | Salary: $80,000</li>
+              <li>Name: Pablo Francisco | Salary: $78,000</li>
+              <li>Name: Aneesh Patel | Salary: $90,000</li>
+              <li>Name: Jose Mendez | Salary: $75,000</li>
+            </div>
+            <div class="modal-footer" style="background-color: transparent;">
+              <a
+                class="modal-action modal-close waves-effect waves-green btn-flat"
+                >Ok</a
+              >
+            </div>
+          </div>
+  
+          <div id="modal8" class="modal" style="background-color: transparent;">
+            <div class="modal-content">
+              <h4>Employee Management</h4>
+              <p>
+                <button> View Employees</button>
+                <button> Update Employee Info</button> <br> <br>
+                <button> Add New Employee</button>
+                <button> Remove Employee</button>
+              </p>
+            </div>
+            <div class="modal-footer" style="background-color: transparent;">
+              <a
+                class="modal-action modal-close waves-effect waves-green btn-flat"
+                >Ok</a
+              >
+            </div>
+          </div>
+  
+          <div id="modal9" class="modal" style="background-color: transparent;">
+            <div class="modal-content">
+              <h4>Leave a Comment</h4>
+              
+                <input type="text" placeholder="Leave comments here">
+                <div class="input-field col s12"></div>
+                    <select>
+                      <option value="" disabled selected>Visibility</option>
+                      <option value="1">HR Only</option>
+                      <option value="2">All Management</option>
+                      <option value="3"> All Employees</option>
+                    </select>
+                    <label> Position</label>
+                  </div>
+              
+            
+            <div class="modal-footer" style="background-color: transparent;">
+              <a
+                class="modal-action modal-close waves-effect waves-green btn-flat"
+                >Ok</a
+              >
+            </div>
+          </div>
+  
 
-<!--  MODAL SECTION -->
-<div id="modal7" class="modal" style="background-color: transparent;">
-    <div class="modal-content">
-        <h4>HR Payroll</h4>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-            reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-            laudantium quod quo.
-        </p>
+        <footer class="page-footer indigo lighten-3 text-black">
+          <p
+            class="black-text center"
+            style="font-size:x-large;  padding: 0px; margin: 1%;"
+          >
+            We will help you grow.
+          </p>
+
+          <div class="footer-copyright white-text ">
+              <pre>        © 2019 Copyright </pre>
+    
+              <pre> Contributing developers: <a target="_blank" href="https://clausgut.github.io/gt_portfolio/">Claudia</a>, <a target="_blank" href="https://gtunggala.github.io/gt_portfolio/">Gabriel</a>, <a target="_blank" href="https://jake-david639.github.io/Bootstrap-Portfolio/">Jake</a>, <a target="_blank" href="https://orionholcomb.github.io/Responsive-Portfolio/">Orion</a>, <a target="_blank" href="https://mortezazoughi.github.io/MasterPortfolio/">Morteza</a>   </pre>
+            </div>
+        </footer>
+      </main>
     </div>
-    <div class="modal-footer" style="background-color: transparent;">
-        <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
-    </div>
-</div>
-
-<div id="modal8" class="modal" style="background-color: transparent;">
-    <div class="modal-content">
-        <h4>Employee Dashboard</h4>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-            reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-            laudantium quod quo.
-        </p>
-    </div>
-    <div class="modal-footer" style="background-color: transparent;">
-        <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
-    </div>
-</div>
-
-<div id="modal9" class="modal" style="background-color: transparent;">
-    <div class="modal-content">
-        <h4>HRComments</h4>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-            reiciendis laboriosam porro laborum, aliquid ipsa fugiat molestias
-            laudantium quod quo.
-        </p>
-    </div>
-    <div class="modal-footer" style="background-color: transparent;">
-        <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
-    </div>
-</div>
-
-
-<footer class="page-footer indigo lighten-3 text-black">
-    <p class="black-text center" style="font-size:x-large;  padding: 0px; margin: 1%;">
-        We will help you grow.
-    </p>
-
-    <div class="footer-copyright black-text ">
-        <pre>        © 2019 Copyright </pre>
-        <a class="black-text text-lighten-4 right" href="#!">
-            <pre>
-                  Contributing developers: Claudia, Gabriel, Jake, Orion, Morteza      </pre></a>
-    </div>
-</footer>
-</main>
-</div>
-<!-- <script>
+    <!-- <script>
 
       $(document).ready(function(){
       $('.sidenav').sidenav();
       });
     </script> -->
-<script>
-    $(document).ready(function () {
-
-        $('.modal ').modal({
+    <script>
+        $(document).ready(function() {
+          $("select").formSelect();
+          $('.modal ').modal({
             dismissible: true,
             inDuration: 300,
             outDuration: 200,
-            ready: function (modal, trigger) {
-                console.log('modal opened', modal, trigger);
+            ready: function(modal, trigger) {
+              console.log('modal opened', modal, trigger);
             }
+          });
         });
-    });
-</script>
+      </script>
+  </body>
+</html>

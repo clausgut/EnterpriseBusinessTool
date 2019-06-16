@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-const orm = require('../config/orm');
-
-const employeeInformation = {
-    all: function(cb) {
-        orm.all('employees', function(res) {
-            cb(res);
-        })
-    },
-    create: function(cols, vals, cb) {
-        orm.create('employees', cols, vals, function(res) {
-            cb(res);
-        })
-    },
-    update: function(objColVals, condition, cb) {
-        orm.update('employees', objColVals, condition, function(res) {
-            cb(res);
-        });
-    },
-    delete: function(condition, cb) {
-        orm.delete('employees', condition, function(res) {
-            cb(res);
-        });
-    }
-}
-
-module.exports = employeeInformation;
-=======
 'use strict';
 module.exports = (sequelize, DataTypes) => {
     // modeling the employee table in sequalize.
@@ -77,4 +49,3 @@ module.exports = (sequelize, DataTypes) => {
     };
     return Employee;
 };
->>>>>>> 5b771850c5dfec8778c3fe16ab9c427f5271d428
