@@ -2,12 +2,14 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const sequelize = require('sequelize');
-const db = require('db');
-const {supervisorRouter, employeeRouter, indexRouter, hrRouter} = require('./routes');
+const {employeeRouter, indexRouter} = require('./routes');
 
 // initialize the express server
 const PORT = process.env.PORT || 5000;
 const app = express();
+
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static('public'));
 
 // express server arguments
 app.use(express.urlencoded({ extended: true }));
@@ -28,13 +30,13 @@ app.set('view engine', 'handlebars');
 //   });
 
 // sync models in the database
-sequelize.sync();
+// sequelize.sync();
 
 // setting express to use created routes
-app.use('/api', supervisorRouter);
+// app.use('/api', supervisorRouter);
 app.use('/api', employeeRouter);
-app.use('/api', hrRouter);
-app.use('/api', indexRouter);
+// app.use('/api', hrRouter);
+app.use('/', indexRouter);
 
 app.get('/', (req, res) => {
     res.render('index');
