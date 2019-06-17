@@ -1,4 +1,3 @@
-'use strict';
 module.exports = (sequelize, DataTypes) => {
     // modeling the employee table in sequalize.
     const Employee = sequelize.define('employee',
@@ -40,12 +39,13 @@ module.exports = (sequelize, DataTypes) => {
             },
         }, {
             sequelize,
-            modelName: 'employees'
-            // options
+            modelName: 'employees',
+          // options
+            timestamps: false
         });
     // associations here
-    Employee.associate = function (models) {
+    // Employee.associate = function (models) {
         // this.belongsTo(models.group, { foreignKey: 'teamSpecifier' });
-    };
+    // };
     return Employee;
 };
