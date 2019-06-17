@@ -3,26 +3,36 @@ const router = require("express").Router();
 var activeUser = {};
 
 // the login_credential model
-const login_credential = require('../models/login_credential.js');
+const db = require('../models');
 
 // query the datapase to get the access level of the user and render the appropriate page.
-router.get('/api/login_credentials', (req, res) => {
-    login_credential.findByPk({
+router.get('/dashboard', (req, res) => {
+    console.log(req.query);
+    db.login_credentials.findOne({
         where: {
-            username: req.body.email
+            username: req.query.uname
         }
-    }).then(() => {
-        activeUser = res.body;
+    }).then(data => {
+        activeUser = data;
         if (activeUser.access_level === 1) {
-            res.render('employee');
+          res.render('employee', {
+            username: activeUser.username,
+            access: activeUser.access_level
+          });
         } else if (activeUser.access_level === 2) {
-            res.render('hr');
+            res.render('hr', {
+              username: activeUser.username,
+              access: activeUser.access_level
+            });
         } else if (activeUser.access_level === 3) {
-            res.render('supervisor');
+            res.render('supervisor', {
+              username: activeUser.username,
+              access: activeUser.access_level
+            });
         }
     });
 });
 
 //exporting for the server.js file to use
 module.exports = router;
-module.exports = activeUser;
+// module.exports = activeUser;

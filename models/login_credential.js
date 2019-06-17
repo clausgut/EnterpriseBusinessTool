@@ -20,11 +20,12 @@ const Login_Credential = sequelize.define('login_credentials',
   }
 }, {
   sequelize,
-  modelName: 'login_credentials'
+  modelName: 'login_credentials',
+  timestamps: false
   // options
 });
-Login_Credential.associate = function(models) {
-    // associations can be defined here
-  };
+// Login_Credential.associate = function(models) {
+    // // associations can be defined here
+  // };
   return Login_Credential;
 };

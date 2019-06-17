@@ -1,7 +1,7 @@
 /* body {
   background-image: url('../images/background3.jpg');
-  background-position: center; 
- background-repeat: no-repeat; 
+  background-position: center;
+ background-repeat: no-repeat;
   background-size: cover;
  } */
 
@@ -44,3 +44,4 @@ body {
 main {
   flex: 1 0 auto;
 }
+
