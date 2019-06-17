@@ -1,13 +1,11 @@
 $(document).ready(function() {
     // Getting references to the name input and author container, as well as the table body
     var hrPayroll = $("#hrPayroll");
-    var hrEmployeeDashboard = $("#hrEmployeeDashboard");
-    var hrComment = $("#hrComment");
 
     // Adding event listeners to the form to create a new object, and the button to delete
     // an Author
     $(document).on("submit", "#hrPayroll", handleAuthorFormSubmit);
-    $(document).on("click", "#hrPayroll", handleDeleteButtonPress);
+    // $(document).on("click", "#hrPayroll", handleDeleteButtonPress);
   
     // Getting the initial list of Authors
     getEmployees();
