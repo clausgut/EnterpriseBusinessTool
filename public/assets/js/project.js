@@ -16,6 +16,27 @@ $(document).ready(function() {
       'Thank You. Registration is complete and added to database.';
   }
 
+  $(document).ready(function() {
+
+    $(".logInBtn").on("submit", function(event) {
+      event.preventDefault();
+      var logInInfo = {
+        email: $(this).children("#email").val(),
+      };
+  
+      $.ajax({
+        method: "GET",
+        url: "/dashboard",
+        data: logInInfo
+      }).then(function(data) {
+        // reload page to display devoured burger in proper column
+        location.reload();
+      });
+  
+    });
+  });
+  
+
   $('#hrEmployeeDashboard').on('click', function() {
     const access = $('#whoami').data("access");
     $.ajax({

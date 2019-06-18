@@ -2,7 +2,12 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const sequelize = require('sequelize');
-const {employeeRouter, indexRouter} = require('./routes');
+const bodyParser = require('body-parser')
+const employeeRouter = require('./routes/employeeRoutes');
+const indexRouter = require('./routes/indexRoutes');
+const hrRouter = require('./routes/hrRoutes');
+
+
 
 // initialize the express server
 const PORT = process.env.PORT || 5000;
@@ -35,8 +40,9 @@ app.set('view engine', 'handlebars');
 // setting express to use created routes
 // app.use('/api', supervisorRouter);
 app.use('/api', employeeRouter);
-// app.use('/api', hrRouter);
+app.use('/api', hrRouter);
 app.use('/', indexRouter);
+
 
 app.get('/', (req, res) => {
     res.render('index');

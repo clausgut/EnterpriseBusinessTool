@@ -7,25 +7,24 @@ const db = require('../models');
 
 // query the datapase to get the access level of the user and render the appropriate page.
 router.get('/dashboard', (req, res) => {
-    console.log(req.query);
     db.login_credentials.findOne({
         where: {
-            username: req.query.uname
+            username: req.params.email
         }
     }).then(data => {
-        activeUser = data;
+         activeUser.access_level = data.access_level;
         if (activeUser.access_level === 1) {
-          res.render('employee', {
+          return res.render('employee', {
             username: activeUser.username,
             access: activeUser.access_level
           });
         } else if (activeUser.access_level === 2) {
-            res.render('hr', {
+            return res.render('hr', {
               username: activeUser.username,
               access: activeUser.access_level
             });
         } else if (activeUser.access_level === 3) {
-            res.render('supervisor', {
+            return res.render('supervisor', {
               username: activeUser.username,
               access: activeUser.access_level
             });
