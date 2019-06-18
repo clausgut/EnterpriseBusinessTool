@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const employeeRouter = require('./routes/employeeRoutes');
 const indexRouter = require('./routes/indexRoutes');
 const hrRouter = require('./routes/hrRoutes');
-
+const hrRouter = require('./routes/supervisorRoutes');
 
 
 // initialize the express server
@@ -23,22 +23,7 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set('view engine', 'handlebars');
 
-// app.use(express.static("views"));
-
-// sequelize
-//   .authenticate()
-//   .then(() => {
-//     console.log('Connection has been established successfully.');
-//   })
-//   .catch(err => {
-//     console.error('Unable to connect to the database:', err);
-//   });
-
-// sync models in the database
-// sequelize.sync();
-
-// setting express to use created routes
-// app.use('/api', supervisorRouter);
+app.use('/api', supervisorRouter);
 app.use('/api', employeeRouter);
 app.use('/api', hrRouter);
 app.use('/', indexRouter);

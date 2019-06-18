@@ -1,9 +1,7 @@
 // dependencies
 const router = require("express").Router();
-//getting the data for the currently signed in user
-// const activeUser = require('activeUser');
-// import the employee model
 
+// import the models
 const db = require("../models");
 
 
