@@ -7,7 +7,7 @@ VALUES
 
 INSERT INTO login_credentials(username, password, access_level, employee_id)
 VALUES
-('jdavis', 'testPass', 2, 1),
+('jdavis@yahoo.com', 'testPass', 2, 1),
 ('pfrancisco', 'testPass1', 1, 2),
 ('apatel', 'testPass2', 3, 3),
 ('jmendez', 'testPass3', 1, 4),
