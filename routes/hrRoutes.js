@@ -1,6 +1,5 @@
 // dependencies
 const router = require("express").Router();
-
 // import the models
 const db = require("../models");
 

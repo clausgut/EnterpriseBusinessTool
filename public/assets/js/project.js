@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  var username = '';
   console.log('file loaded');
 
   function passwordFunction() {
@@ -16,33 +17,30 @@ $(document).ready(function() {
       'Thank You. Registration is complete and added to database.';
   }
 
-  $(document).ready(function() {
+  $("#logInBtn").on("click", function (event) {
+    event.preventDefault();
+    username = $("#username").val();
 
-    $(".logInBtn").on("submit", function(event) {
-      event.preventDefault();
-      var logInInfo = {
-        email: $(this).children("#email").val(),
-      };
-  
-      $.ajax({
-        method: "GET",
-        url: "/dashboard",
-        data: logInInfo
-      }).then(function(data) {
-        // reload page to display devoured burger in proper column
-        location.reload();
-      });
-  
+    $.ajax({
+      method: "GET",
+      url: `/dashboard/${username}`
+    }).then((res, err) => {
+      if (err) throw err;
+      console.log('login query done!');
+      // var data = res.body.dataValues;
+      console.log(res);
+      // console.log(res.dataValues.access_level);
+      // $('#whoami').data('access', res.dataValues.access_level);
+      // location.reload();
     });
   });
-  
 
-  $('#hrEmployeeDashboard').on('click', function() {
+  $('#hrEmployeeDashboard').on('click', function () {
     const access = $('#whoami').data("access");
     $.ajax({
       method: 'GET',
       url: '/api/employees?access=' + access
-    }).then(function(data) {
+    }).then(function (data) {
       for (let i = 0; i < data.length; i++) {
         const row = $(`<tr class="employeeData" data-emp="${data[i].id}">`);
         const firstName = $(`<td>${data[i].first_name}</td>`);
@@ -65,17 +63,16 @@ $(document).ready(function() {
 
   function refreshEmployeeClickListener() {
     console.log('ran this func');
-    $('.employeeData').on('click', function() {
+    $('.employeeData').on('click', function () {
       // This is here in case you want to click on a row and do something with the employee
       console.log('You clicked on employee with ID ' + $(this).data('emp'));
       $.ajax({
         method: 'GET',
         url: '/api/employee/' + $(this).data('emp')
-      }).then(function(data) {
+      }).then(function (data) {
         console.log(data);
         // You could take the HR rep to another page or something to edit the user data and PUT that back to the API
       });
     });
   }
 });
-

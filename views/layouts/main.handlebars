@@ -22,7 +22,8 @@
     <a href="#!" class="brand-logo"><img src="/assets/images/logo2.png" style=" height:65px; width:190px;"></a>
 
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a id="whoami" data-access={{ access }}>Welcome {{ username }}!</a></li>
+      {{!-- holds the access level of the user after sign-on --}}
+      <li><a id="whoami" data-access=''></a></li>
       <li><a href="#" id="supLogout" class="waves-effect waves-light orange darken-4 btn">Log Out</a></li>
     </ul>
   </nav>
