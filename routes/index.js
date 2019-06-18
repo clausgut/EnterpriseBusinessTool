@@ -1,10 +1,10 @@
-// const supervisorRouter = require('./supervisorRoutes');
+const supervisorRouter = require('./supervisorRoutes');
 const employeeRouter = require('./employeeRoutes');
 const indexRouter = require('./indexRoutes');
 const hrRouter = require('./hrRoutes');
 
 module.exports = {
-    // supervisorRouter,
+    supervisorRouter,
     employeeRouter,
     indexRouter,
     hrRouter

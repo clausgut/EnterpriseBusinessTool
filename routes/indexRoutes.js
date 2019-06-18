@@ -1,9 +1,8 @@
 // dependencies
 const router = require("express").Router();
-var activeUser = {};
-
-// the login_credential model
 const db = require('../models');
+
+var activeUser = {};
 
 // query the datapase to get the access level of the user and render the appropriate page.
 router.get('/dashboard', (req, res) => {
