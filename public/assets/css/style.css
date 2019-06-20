@@ -6,7 +6,7 @@
  } */
 
 #backGround::before {
-  background-image: url('../images/background3.jpg');
+  background-image: url('/assets/images/background3.jpg');
   background-size: cover;
   background-position: center;
   content: '';
@@ -21,7 +21,7 @@
 }
 
 #employeePage::before {
-  background-image: url('../images/watermark.png');
+  background-image: url('/assets/images/watermark.png');
   background-size: cover;
   background-position: center;
   content: '';

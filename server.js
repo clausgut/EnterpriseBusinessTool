@@ -47,18 +47,16 @@ app.get('/dashboard/:username', (req, res) => {
         console.log('Server: Login query completed!');
         activeUser.access_level = user.access_level;
         console.log(activeUser);
-        res.render('hr');
-    // }).then(() => {
-    //         if (activeUser.access_level === 1) {
-    //             res.render('employee');
-    //         } else if (activeUser.access_level === 2) {
-    //             res.render('hr');
-    //         } else if (activeUser.access_level === 3) {
-    //             res.render('supervisor');
-    //         }
+    }).then(() => {
+            if (activeUser.access_level === 1) {
+                res.render('employee');
+            } else if (activeUser.access_level === 2) {
+                res.render('hr');
+            } else if (activeUser.access_level === 3) {
+                res.render('supervisor');
+            }
     });
 });
-
 
 // start the server looking for requests
 app.listen(PORT, () => console.log('Listening...'));
